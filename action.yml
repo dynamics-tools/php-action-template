@@ -1,5 +1,5 @@
-name: 'Publish changes to Microsoft Dynamics instance'
-description: 'Run this when you have made changes and want to publish them in your Microsoft Dynamics instance'
+name: 'Put name to action here'
+description: 'Put description for action here'
 branding:
   icon: 'arrow-up-right'
   color: 'blue'
