@@ -23,10 +23,10 @@ To include this action in your GitHub Workflow, add the following step:
     - name: Publish changes to Microsoft Dynamics instance
       uses: dynamics-tools/publish-dynamics-changes@v1
       with:
-        dynamics-url: 'https://example.com' # alternatively secrets.DYNAMICS_URL
-        application-id: '0000-0000-0000-0000' # alternatively secrets.APPLICATION_ID
-        application-secret: '.akdjfoawiefe-~kdja' # alternatively secrets.APPLICATION_SECRET
-        tenant-id: '0000-0000-0000-0000' # alternatively secrets.TENANT_ID
+        dynamics-url: 'https://example.com' # alternatively ${{ secrets.YOUR_VARIABLE_FOR_DYNAMICS_URL }}
+        application-id: '0000-0000-0000-0000' # alternatively ${{ secrets.YOUR_VARIABLE_FOR_APPLICATION_ID }}
+        application-secret: '.123456-~abcdefg' # alternatively ${{ secrets.YOUR_VARIABLE_FOR_APPLICATION_SECRET }}
+        tenant-id: '0000-0000-0000-0000' # alternatively ${{ secrets.YOUR_VARIABLE_FOR_TENANT_ID }}
 ```
 
 ### Example Workflow
@@ -49,8 +49,8 @@ jobs:
     - name: Publish changes to Microsoft Dynamics instance
       uses: dynamics-tools/publish-dynamics-changes@v1
       with:
-        dynamics-url: secrets.DYNAMICS_URL
-        application-id: secrets.APPLICATION_ID
-        application-secret: secrets.APPLICATION_SECRET
-        tenant-id: secrets.TENANT_ID
+        dynamics-url: ${{ secrets.DYNAMICS_URL }}
+        application-id: ${{ secrets.APPLICATION_ID }}
+        application-secret: ${{ secrets.APPLICATION_SECRET }}
+        tenant-id: ${{ secrets.TENANT_ID }}
 ```
